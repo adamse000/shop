@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibe Threads - Teen Fashion</title>
+    <title>Worn fit - Fashion</title>
     <style>
         a {
             text-decoration: none;
+            color: inherit;
             
         }
         a:hover {
             text-decoration: none;
+            color: inherit;
         }
         
         
@@ -140,6 +142,7 @@
             overflow: hidden;
             margin: 30px;
             border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
             
         }
         .hero::before {
@@ -407,7 +410,7 @@
         }
 
 
-        /* From Uiverse.io by andrew-demchenk0 */ 
+      
 .switch {
   font-size: 17px;
   position: relative;
@@ -527,17 +530,47 @@
     object-fit: cover;
     margin-top: 30px;
     cursor: pointer;
-    
-
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-       
+.img-hero:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.1);
+}
 
+.product-card{
+    cursor: pointer;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 180px;
+}
 
-   
+.product-card.knit .product-image img {
+    transition:  all 0.5s ease;
+    content: url('dark_grey_crown_knitwear_weyz_04.jpg');
+    
+}
+
+.product-card.knit:hover .product-image img {
+    
+    content: url('light_grey_crown_knitwear_weyz_04.jpg');
+    
+}
+
+.product-card.syna .product-image img {
+    transition: all 0.5s ease;
+    content: url('syna.jpg');
+}
+
+.product-card.syna:hover .product-image img {
+    content: url('gg2.webp');
+}
+
 
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -548,9 +581,9 @@
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Shop</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#shop">New Arrivals</a></li>
+                    <li><a href="#best-sells">Collections</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
                 
                     <!-- From Uiverse.io by andrew-demchenk0 --> 
@@ -588,8 +621,8 @@
 
     <div class="container">
         <h2 class="section-title">New Arrivals</h2>
-        <div class="products">
-            <div class="product-card">
+        <div class="products" id="shop">
+           <a href="cortez.html"> <div class="product-card">
                 <div class="product-image">
                   <img src="cortez.jpg" alt="cortez jorts">
                     <span class="product-badge">New</span>
@@ -604,13 +637,16 @@
                     </div>
                 </div>
             </div>
+            </a>
 
-            <div class="product-card">
+            <a href="syna.html">
+            <div class="product-card syna">
                 <div class="product-image">
-                    <img src="Syna Men's T-shirt $80_00.jpg" alt="syna">
+                    <img src="syna.jpg" alt="syna">
                 </div>
+                
                 <div class="product-info">
-                    <h3 class="product-title">Vintage Denim Jacket</h3>
+                    <h3 class="product-title">Syna World Summer Tracksuit</h3>
                     <div class="product-price">
                         <span class="price">$59.99</span>
                         <button class="add-to-cart">
@@ -619,13 +655,16 @@
                     </div>
                 </div>
             </div>
-
+            </a>
+             <a href="suvene.html">
             <div class="product-card">
                 <div class="product-image">
                     <img src="SUVENE Jogger flared fit.jpg" alt="Jogger Pants">
                     <span class="product-badge">Sale</span>
                 </div>
-                <div class="product-info">
+                
+                
+                    <div class="product-info">
                     <h3 class="product-title">Suvene Jogger Flared</h3>
                     <div class="product-price">
                         <span class="price">$39.99</span>
@@ -634,14 +673,18 @@
                         </button>
                     </div>
                 </div>
+                
             </div>
+            </a>
+            
+            <a href="kint.html">
 
-            <div class="product-card">
+            <div class="product-card knit">
                 <div class="product-image">
-                    <img src="NIGHTWALKERS T-SHIRT WEYZ (1).jpg" alt="Hoodie">
+                    <img src="dark_grey_crown_knitwear_weyz_04.jpg" alt="KNIT">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Night Walkers T-SHIRT</h3>
+                    <h3 class="product-title">"ABYSSAL" KNIT</h3>
                     <div class="product-price">
                         <span class="price">$49.99</span>
                         <button class="add-to-cart">
@@ -651,9 +694,10 @@
                 </div>
             </div>
         </div>
+        </a>
 
         <h2 class="section-title">Best Sellers</h2>
-        <div class="products">
+        <div class="products" id="best-sells">
             <div class="product-card">
                 <div class="product-image">
                     <img src="DUO VINTAGE JOGGER PANTS WEYZ.jpg" alt="Crop Top">
@@ -706,15 +750,14 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content" id="footer">
                 <div class="footer-column">
                     <h3>VibeThreads</h3>
                     <p>Sustainable fashion for the next generation. Quality clothing that cares for the planet.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>                      
+                        <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
